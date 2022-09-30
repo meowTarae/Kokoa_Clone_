@@ -9,7 +9,13 @@ rel은 relation, 관계
         +) image도 inline
     또한 위아래 margin 값을 가질 수 없음.
 
+
 ! collapsing margins 
     여러 div들의 margin이 같을때
     그 div들의 margin이 하나로 통합됨.
     위, 아래만 적용.
+
+
+! flex-wrap
+    창 크기를 줄여도, div 크기를 유지해줌.
+    대신 같은 행에 있던 div들이 밑 열로 이동할 순 있음

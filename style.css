@@ -1,0 +1,33 @@
+body {
+  background-color: tomato;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 27vw;
+  height: 45vh;
+  max-width: 600px;
+  max-height: 600px;
+  background-color: wheat;
+  border: 6px solid black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.innerBox {
+  width: 23%;
+  height: 20%;
+  background-color: teal;
+  border: 7px solid white;
+}
+
+#box2 {
+  width: 80%;
+  border: 7px dashed white;
+}
