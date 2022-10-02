@@ -1,73 +1,86 @@
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  background-color: whitesmoke;
+  background-color: #1f2937;
   height: 97vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
-}
-body > span {
-  margin-bottom: 2%;
-}
-span {
-  display: block;
-  font-size: 1.3em;
-  font-weight: 900;
 }
 
 .container {
-  background-color: transparent;
-  width: 27vw;
-  height: 80vh;
-
-  position: relative;
-}
-
-.colorBox {
-  border: 8px white solid;
-  width: 12vw;
-  height: 38vh;
-
-  position: absolute;
-}
-
-#box1 {
-  background-color: tomato;
-  top: 0;
-  left: 0;
-}
-#box2 {
-  background-color: teal;
-  top: 0;
-  right: 0;
-}
-#box3 {
-  background-color: burlywood;
-  bottom: 0;
-  left: 0;
-}
-#box4 {
-  background-color: thistle;
-  bottom: 0;
-  right: 0;
-}
-
-.innerBox {
-  margin-top: 8%;
-  background-color: #fff;
-  width: 100%;
+  width: 25%;
   height: 30%;
+}
 
+.circle {
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+
+  animation: turning 2s ease-in-out infinite;
 }
 
-.innerBox span {
-  margin-left: 5%;
+.circle div {
+  margin: 0 6%;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
-.innerBox span:last-child {
-  font-family: serif;
+.squre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.squre div {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 0 0.8%;
+  height: 20%;
+  width: 3%;
+  animation: scale 1.5s ease-in-out infinite;
+}
+
+.squre div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.squre div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.squre div:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.squre div:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes turning {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  20% {
+    transform: scaleY(1.5);
+  }
+  40% {
+    transform: scaleY(1);
+  }
 }
