@@ -1,0 +1,46 @@
+! css 네이밍 규칙
+    => BEM css 를 검색해보자.
+
+
+! Font Awesome
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    위 코드를 </body> 바로 위에 code kit 적어주면 됨.
+
+
+! header 같은 semantic code에도 class 넣을 수 있당
+
+
+! 폰트는 google fonts
+
+
+! reset css
+    구글링해서 코드 복사해오고
+    메인 css 파일 상단에 
+        @import "~~.css";
+
+
+! text-align: center; << 텍스트 정렬 코드
+
+
+! :not 
+    body :not(.box, .container) :not(span) { ~~ }
+
+
+! cursor option
+    특정 부분에 마우스가 올라가면 (hover와 유사하네)    
+    마우스 커서 모양이 바뀌는 옵션. 
+    => css cursor mdn 검색 ㄲ
+
+
+! 화면 이동 (단순 css 이용시)
+    <form action="hello.html" method="get">
+        action에 경로를, method에는 방식을,
+        get은 url에 input값이 들어가는 방식이라 보안에 취약함.
+        post는 서버가 있어야 작동 가능.
+
+
+! 
