@@ -32,3 +32,11 @@
         }
     }
 
+
+! box-sizing: border-box;
+    css에게 box 사이즈를 변경하지 말라고 하는 명령어
+    
+    ex)
+        width가 200px인 div에 padding-left: 50px를 넣으면
+        div 크기가 50+200 => 250이 되어버림
+        but border-box 속성을 넣으면 div 크기를 키우지 않게 해줌.
