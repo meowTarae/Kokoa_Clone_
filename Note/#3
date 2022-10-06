@@ -14,6 +14,8 @@ rel은 relation, 관계
     여러 div들의 margin이 같을때
     그 div들의 margin이 하나로 통합됨.
     위, 아래만 적용.
+        => padding을 준다던지.. 등을 통해
+           margin을 다르게 해준다면 위 현상이 해결 됨.
 
 
 ! flex-wrap
