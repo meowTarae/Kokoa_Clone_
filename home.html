@@ -4,122 +4,110 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Playlist</title>
+    <title>Tarae's Music</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <!-- 왼쪽 화면 -->
-    <div class="screen screen-left">
-      <div class="status-bar">
+    <!-- ******* Left Side ******* -->
+    <div class="container leftSide">
+      <div class="nav leftSide__nav">
         <i class="fas fa-arrow-left fir-icon"></i>
         <i class="fas fa-search sec-icon"></i>
       </div>
-
-      <div class="top">
-        <div class="top__image"></div>
-        <h3 class="top__name top__text">Younha</h3>
-        <h5 class="top__tag top__text">Modern Rock, Ballade</h5>
+      <div class="leftSide__singer">
+        <div class="leftSide__singer__img"></div>
+        <div class="leftSide__singer__info">
+          <span><strong>Younha</strong></span>
+          <span>Modern Rock, Ballade</span>
+        </div>
       </div>
-
-      <div class="middle-box">
-        <div class="middle-box__union middle-box__left">
+      <div class="leftSide__optionBtn">
+        <div class="leftSide__optionBtn__shuffle">
           <i class="fas fa-random"></i>
-          <span class="middle-box__left__text">Shuffle</span>
+          Shuffle
         </div>
-
-        <div class="middle-box__union middle-box__right">
+        <div class="leftSide__optionBtn__heart">
           <i class="fas fa-heart"></i>
-          <span class="middle-box__right__text">2,949,373</span>
+          880,429
         </div>
       </div>
-
-      <div class="bottom">
-        <!-- ~List 1~ -->
-        <div class="bottom__songlist list-1">
+      <!-- 곡 6~7 곡 넣어놓고, 스크롤링 하면 보이게끔 해보자 -->
+      <div class="leftSide__playLists">
+        <!-- 오르트 구름 -->
+        <div class="leftSide__playList">
           <img
-            src="data:image/jpeg;base64,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"
+            src="https://lh3.googleusercontent.com/0k_u5oGZBtfPplIXhZ1FKJqny8H-EF66U7hDPtoFqOg3A9-eJc6qHPKbKv0EbkBE1VzShL6BSFl27GwD=w544-h544-l90-rj"
             alt=""
           />
-          <div class="bottom__songlist__text">
-            <h3>Hyunwoo Ha</h3>
-            <h5>태양처럼</h5>
+          <div class="leftSide__playList__nowPlaying">
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+          </div>
+          <div class="leftSide__playList__info">
+            <span>Younha</span>
+            <span>Oort Cloud</span>
           </div>
           <i class="fas fa-ellipsis-v"></i>
         </div>
 
-        <!-- ~List 2~ -->
-        <div class="bottom__songlist list-2">
+        <!-- 살별 -->
+        <div class="leftSide__playList">
           <img
-            src="https://yt3.ggpht.com/ytc/AAUvwniMolwPKAPr8QS19RYjuXmuM0wTpPQ4yLeQn9Lafg=s88-c-k-c0x00ffffff-no-rj"
+            src="https://lh3.googleusercontent.com/ZpZzX4EUtn99T7mx7GIVQQjY3O7ysaRmdtgfbkanxgiM6v43vddimMkcRiIohs6_gcEeASBerBD09cW3=w544-h544-l90-rj"
             alt=""
           />
-          <div class="bottom__songlist__text">
-            <h3>PAKA , Youtube Creator</h3>
-            <h5>Wind Song</h5>
+          <div class="leftSide__playList__info">
+            <span>Younha</span>
+            <span>c2022YH</span>
           </div>
           <i class="fas fa-ellipsis-v"></i>
         </div>
 
-        <!-- ~List 3~ 애니메이션 작업할 곳 !! -->
-        <div class="bottom__songlist list-3">
+        <!-- 사건의 지평선 -->
+        <div class="leftSide__playList">
           <img
-            src="https://yt3.ggpht.com/ytc/AAUvwniphazCD6MzyJEnJVwuXtI6o86qhZyg2sQIWz4thA=s176-c-k-c0x00ffffff-no-rj-mo"
+            src="data:image/jpeg;base64,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"
             alt=""
           />
-          <div class="ani-sticks">
-            <div class="ani-stick"></div>
-            <div class="ani-stick"></div>
-            <div class="ani-stick"></div>
-          </div>
-          <div class="bottom__songlist__text">
-            <h3>Ralo , Youtube Creator</h3>
-            <h5>i can't beat airman !</h5>
-          </div>
-          <i class="fas fa-ellipsis-v"></i>
-        </div>
-
-        <!-- ~List 4~ -->
-        <div class="bottom__songlist list-4">
-          <img
-            src="https://yt3.ggpht.com/ytc/AAUvwngMqYZovw2S6-X5zECyO_39ehbW9PuSsLwYW9hQYg=s88-c-k-c0x00ffffff-no-rj"
-            alt=""
-          />
-          <div class="bottom__songlist__text">
-            <h3>Gang Zi , Youtube Creator</h3>
-            <h5>방해쟁이!</h5>
+          <div class="leftSide__playList__info">
+            <span>Younha</span>
+            <span>Event Horizon</span>
           </div>
           <i class="fas fa-ellipsis-v"></i>
         </div>
       </div>
-
-      <div class="bottom__down-bar">
-        <div class="bottom__down-bar__text">
-          <h5 class="down-bar__text">Ralo , Youtube Creator</h5>
-          <h3 class="down-bar__text">i can't beat airman !</h3>
+      <div class="leftSide__playingMusic">
+        <div class="leftSide__playingMusic__info">
+          <span>Younha</span>
+          <span>Oort Cloud</span>
         </div>
-        <!--  icon -->
-        <div class="bottom__down-bar__icon">
+        <div class="leftSide__playingMusic__btn">
           <i class="fas fa-step-backward fa-sm"></i>
-          <span class="bottom__down-bar__icon-button">
-            <i class="fas fa-pause"></i>
-          </span>
+          <i class="fas fa-pause"></i>
           <i class="fas fa-step-forward fa-sm"></i>
         </div>
       </div>
     </div>
 
-    <!-- 오른쪽 화면 -->
-    <div class="screen screen-right">
-      <div class="status-bar">
+    <!-- ******* Right Side ******* -->
+
+    <div class="container rightSide">
+      <div class="nav rightSide__nav">
         <i class="fas fa-arrow-left fir-icon"></i>
         <i class="fas fa-ellipsis-v"></i>
       </div>
-
-      <div class="playsong">
-        <img src="" alt="" />
-        <span class="playsong-title">i can't beat airman !</span>
-        <span class="playsong-name">Ralo , Youtube Creator</span>
+      <div class="rightSide__blank"></div>
+      <div class="rightSide__album">
+        <img
+          src="https://lh3.googleusercontent.com/0k_u5oGZBtfPplIXhZ1FKJqny8H-EF66U7hDPtoFqOg3A9-eJc6qHPKbKv0EbkBE1VzShL6BSFl27GwD=w544-h544-l90-rj"
+          alt=""
+        />
+      </div>
+      <div class="rightSide__album-title">
+        <span>Oort Cloud</span>
+        <span>Younha</span>
       </div>
 
       <div class="time">
@@ -127,20 +115,16 @@
         <div class="all-time">3:45</div>
       </div>
 
-      <div class="make-range">
-        <form>
-          <input class="time-bar" type="range" value="56" />
-        </form>
-        <div class="bar"></div>
-        <div class="circle"></div>
-      </div>
+      <form>
+        <input class="time-bar" type="range" value="56" />
+      </form>
 
-      <div class="right-bottom">
-        <i class="fas right-bottom__o fa-sync-alt"></i>
-        <i class="fas right-bottom__m fa-step-backward"></i>
-        <i class="fas right-bottom__c fa-play-circle"></i>
-        <i class="fas right-bottom__m fa-step-forward"></i>
-        <i class="fas right-bottom__o fa-random"></i>
+      <div class="rightSide__btns">
+        <i class="fas rightSide__btns__o fa-sync-alt"></i>
+        <i class="fas rightSide__btns__m fa-step-backward"></i>
+        <i class="fas rightSide__btns__c fa-play-circle"></i>
+        <i class="fas rightSide__btns__m fa-step-forward"></i>
+        <i class="fas rightSide__btns__o fa-random"></i>
       </div>
     </div>
 
