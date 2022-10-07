@@ -1,3 +1,6 @@
 화면 수직 분할 = cmd k + cmd \
 maximize editor group = cmd alt shift enter
-해당 함수 끝으로 =  alt shift \
+해당 함수 끝으로
+    윈도우 : alt shift \
+    맥 : cmd shift \
+
